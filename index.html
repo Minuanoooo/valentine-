@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Для тебя ❤️</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+
+    <div class="hearts"></div>
+
+    <div id="invitation" class="card">
+        <h1>Привет Миса</h1>
+        <p>Не хочешь погулять?</p>
+
+        <button id="yes" class="btn">Конечно хочу ❤️</button>
+        <button id="no" class="btn">Нет</button>
+
+        <img src="static/pngs/Screenshot_2.png" class="sticker sticker-1">
+    </div>
+
+    <div id="after_yes" class="card" style="display: none;">
+
+        <h1>Отлично, тогда выбери дату, время и место)</h1>
+
+        <div id="calendar" style="display: none;"></div>
+
+        <input type="time" id="time-input">
+
+        <input
+            type="text"
+            id="place-input"
+            placeholder="Где встретимся?"
+        >
+
+        <button id="info" class="btn">Назначить</button>
+
+        <img src="static/pngs/Screenshot_1.png" class="sticker sticker-2">
+        <img src="static/pngs/Screenshot_3.png" class="sticker sticker-3">
+
+    </div>
+
+    <div id="after_info" class="card" style="display: none;">
+
+        <h1>Встреча назначена, я передам гандону этому</h1>
+
+        <img src="static/pngs/Screenshot_4.png" class="sticker sticker-4">
+
+    </div>
+
+    <script src="static/script.js"></script>
+
+</body>
+
+</html>

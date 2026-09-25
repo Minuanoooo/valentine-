@@ -1,0 +1,110 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    margin: 0;
+    overflow: hidden;
+
+    background: #f7e8ee;
+    font-family: Arial, sans-serif;
+}
+
+/* Сердечки на фоне */
+.hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    opacity: 0.2;
+}
+
+/* Окна */
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    position: relative;
+    z-index: 1;
+}
+
+/* Кнопки */
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+#yes {
+    background: #ffaff4;
+}
+
+#no {
+    background: hsl(300, 1%, 80%);
+}
+
+#info {
+    background: #ffaff4;
+}
+
+/* Стикеры */
+.sticker {
+    position: fixed;
+    width: 45px;
+}
+
+.sticker-1 {
+    top: 49.5%;
+    left: 55.5%;
+}
+
+.sticker-2 {
+    width: 200px;
+    top: 71%;
+    left: 20%;
+}
+
+.sticker-3 {
+    width: 200px;
+    top: 8%;
+    left: 80%;
+}
+
+.sticker-4 {
+    width: 300px;
+    top: 61%;
+    left: 40%;
+}
+
+/* Календарь */
+.day {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    margin: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.day:hover {
+    background: #ffaff4;
+    transform: scale(1.1);
+}
+
+.day.selected {
+    background: #ffaff4;
+    transform: scale(1.1);
+}
