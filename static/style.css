@@ -3,15 +3,14 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-
     margin: 0;
     overflow: hidden;
-
     background: #f7e8ee;
     font-family: Arial, sans-serif;
 }
 
 /* Сердечки на фоне */
+
 .hearts {
     position: fixed;
     inset: 0;
@@ -26,18 +25,22 @@ body {
 }
 
 /* Окна */
+
 .card {
     background: white;
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
-
     position: relative;
     z-index: 1;
+
+    width: min(500px, calc(100% - 40px));
+    box-sizing: border-box;
 }
 
 /* Кнопки */
+
 .btn {
     padding: 12px 20px;
     border: none;
@@ -60,6 +63,7 @@ body {
 }
 
 /* Стикеры */
+
 .sticker {
     position: fixed;
     width: 45px;
@@ -89,6 +93,7 @@ body {
 }
 
 /* Календарь */
+
 .day {
     width: 45px;
     height: 45px;
@@ -108,7 +113,11 @@ body {
     background: #ffaff4;
     transform: scale(1.1);
 }
+
+/* Мобильная версия */
+
 @media (max-width: 600px) {
+
     .card {
         padding: 25px 15px;
     }
