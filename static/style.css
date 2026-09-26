@@ -139,13 +139,13 @@ body {
 
     .sticker-1 {
         width: 35px;
-        top: 45%;
-        left: 80%;
+        top: 50%;
+        left: 75%;
     }
 
     .sticker-2 {
-        width: 120px;
-        top: 75%;
+        width: 90px;
+        top: 85%;
         left: 5%;
     }
 
@@ -158,6 +158,6 @@ body {
     .sticker-4 {
         width: 180px;
         top: 70%;
-        left: 35%;
+        left: 30%;
     }
 }
