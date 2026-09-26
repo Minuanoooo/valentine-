@@ -1,0 +1,143 @@
+# 💌 For Misa
+
+A small website invitation for a walk.
+
+I made it as a small pet project to practice connecting a simple frontend built with HTML/CSS/JS to a FastAPI backend and sending data to Telegram.
+
+## What it does
+
+* Shows an invitation to go for a walk
+* The "No" button runs away when you hover over it
+* You can choose a date, time, and meeting place
+* The selected data is sent to the backend
+* The backend sends a notification to Telegram
+* Works on mobile devices
+* Generates small hearts in the background
+
+## Tech Stack
+
+**Frontend:**
+
+* HTML
+* CSS
+* JavaScript
+
+**Backend:**
+
+* Python
+* FastAPI
+* Pydantic
+* HTTPX
+
+**Other:**
+
+* Telegram Bot API
+* Render
+* Git / GitHub
+
+## Running Locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/USERNAME/REPOSITORY.git
+cd REPOSITORY
+```
+
+Create a virtual environment:
+
+```bash
+python -m venv venv
+```
+
+Activate it.
+
+Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+Linux / macOS:
+
+```bash
+source venv/bin/activate
+```
+
+Install the dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Create a `.env` file:
+
+```env
+tg_key=your_telegram_bot_token
+my_chat_id=your_chat_id
+```
+
+Start the server:
+
+```bash
+uvicorn main:app --reload
+```
+
+Then open:
+
+```text
+http://127.0.0.1:8000
+```
+
+## Project Structure
+
+```text
+for_misa/
+├── static/
+│   ├── pngs/
+│   ├── script.js
+│   └── style.css
+├── .gitignore
+├── .env
+├── index.html
+├── main.py
+└── requirements.txt
+```
+
+The `.env` file is not stored in the repository because it contains the Telegram bot token.
+
+## How It Works
+
+The frontend sends the selected data to:
+
+```text
+POST /submit
+```
+
+FastAPI receives the data using a Pydantic model and then sends a message through the Telegram Bot API.
+
+The frontend and backend are part of the same FastAPI application, so in production the request is simply:
+
+```javascript
+fetch("/submit", ...)
+```
+
+## Deployment
+
+The project is deployed on Render.
+
+Whenever I update the code, I can simply run:
+
+```bash
+git add .
+git commit -m "Update project"
+git push
+```
+
+Render automatically builds and deploys the new version after the push.
+
+## Why I Made It
+
+It started as a simple idea to make a funny invitation for a walk.
+
+At the same time, it turned into a small project where I could practice FastAPI, JavaScript, working with APIs, Git, and deployment.
